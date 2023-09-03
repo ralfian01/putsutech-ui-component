@@ -8,9 +8,12 @@
   <li>
     <b><a href="#report">Laporan</a></b>: Panduan pelaporan harian dan minggun untuk tim pengembang
   </li>
+  <li>
+    <b><a href="#installation">Instalasi</a></b>: Panduan instalasi project pada komputer
+  </li>
 </ul>
 
-<h2 id="#briefing">Arahan Tim Frontend Selama Pengembangan</h2>
+<h2 id="briefing">Arahan Tim Frontend Selama Pengembangan</h2>
 <p>Selamat datang di tim pengembangan frontend kami! Kami sangat senang Anda bergabung dengan tim ini untuk berkontribusi pada pengembangan aplikasi kami. Dokumen ini akan memberikan panduan dan informasi yang diperlukan untuk memulai.</p>
 
 <h3>Penjelasan singkat</h3>
@@ -134,3 +137,5 @@
 
 <h3>Pertemuan Tim Mingguan</h3>
 <p>Setiap minggu, tim frontend akan mengadakan pertemuan untuk membahas laporan mingguan, berbagi pengalaman, dan memberikan masukan satu sama lain. Pertemuan ini akan membantu meningkatkan kolaborasi dan pemecahan masalah.</p>
+
+<h2 id="installation">Instalasi</h2>
