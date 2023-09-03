@@ -142,3 +142,18 @@
 
 <br> <br> <br>
 <h2 id="installation">Instalasi</h2>
+
+<h3>Kebutuhan sebelum instalasi</h3>
+<ol>
+  <li>NPM & Node.js</li>
+  <li>React.js Environment</li>
+</ol>
+
+<h3>Cara instalasi</h3>
+<ol>
+  <li>Clone repositori ini ke komputer anda</li>
+  <li>Jalankan perintah dibawah ini untuk meng-install dependency</li>
+  <blockquote>
+    npm update
+  </blockquote>
+</ol>
