@@ -82,7 +82,7 @@
 </ol>
 
 <h3>Kolaborasi</h3>
-<p>Kami sangat mendorong kolaborasi dalam tim kami. Selalu komunikasikan pertanyaan, ide, atau permasalahan dengan tim kami melalui Discord, email, atau pertemuan tim.</p>
+<p>Kami sangat mendorong kolaborasi dalam tim. Selalu komunikasikan pertanyaan, ide, atau permasalahan dengan tim melalui Discord, email, atau pertemuan tim.</p>
 
 <h3>Rencana Pertemuan</h3>
 <p>Rencanakan pertemuan mingguan untuk memeriksa kemajuan, mengatasi masalah, dan berdiskusi tentang fitur baru.</p>
@@ -91,3 +91,36 @@
 <p>Jika memiliki pertanyaan atau butuh bantuan, silakan ajukan pertanyaan kepada anggota tim.</p>
 
 <p>Terima kasih atas dedikasi Anda untuk menjadi bagian dari tim frontend kami. Bersama-sama kita akan menciptakan pengalaman pengguna yang luar biasa!</p>
+
+<h2>Laporan Pekerjaan dan Kendala</h2>
+<h3>Laporan Harian</h3>
+<p>Setiap anggota tim frontend diharapkan untuk melakukan pelaporan harian terkait perkembangan pekerjaan mereka dan melaporkan keluhan atau kesulitan yang mereka hadapi. Ini dapat dilakukan melalui platform Discord pada saluran yang telah disediakan untuk diskusi harian.</p>
+
+<p>Contoh laporan harian:</p>
+<ul>
+  <li>
+    <b>Perkembangan Pekerjaan</b>: Hari ini saya menyelesaikan desain halaman beranda dan mulai mengerjakan komponen sidebar.
+  </li>
+  <li>
+    <b>Kendala</b>: Saya mengalami kendala dalam mengintegrasikan komponen 'Login' dengan backend.
+  </li>
+</ul>
+
+<h3>Rangkuman Laporan Mingguan</h3>
+<p>Setiap anggota tim harus membuat rangkuman laporan pekerjaan mereka selama seminggu penuh. Ini harus mencakup perkembangan signifikan, kendala yang dihadapi, dan rencana untuk minggu berikutnya. Laporan ini akan dibahas selama pertemuan tim mingguan.</p>
+
+<p>Contoh Rangkuman Laporan Mingguan:</p>
+<ul>
+  <li>
+    <b>Pekerjaan yang Diselesaikan</b>: Selama minggu ini, saya menyelesaikan implementasi halaman 'Profil Pengguna' dan mengintegrasikan fitur komentar.
+  </li>
+  <li>
+    <b>Kendala</b>: Saya menghadapi kesulitan dalam mengatasi masalah kinerja saat mengambil data dari API.
+  </li>
+  <li>
+    <b>Rencana Minggu Depan</b>: Minggu depan, saya akan fokus pada pengoptimalan kinerja dan melanjutkan pengembangan halaman 'Dashboard'.
+  </li>
+</ul>
+
+<h3>Pertemuan Tim Mingguan</h3>
+<p>Setiap minggu, tim frontend akan mengadakan pertemuan untuk membahas laporan mingguan, berbagi pengalaman, dan memberikan masukan satu sama lain. Pertemuan ini akan membantu meningkatkan kolaborasi dan pemecahan masalah.</p>
