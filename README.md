@@ -1,6 +1,16 @@
 <h1>Putsutech UI Components Documentation</h1>
 
-<h2>Dokumen Pengarahan Tim Frontend Selama Pengembangan</h2>
+<h3>Navigasi</h3>
+<ul>
+  <li>
+    <b><a href="#briefing">Arahan</a></b>: Dokumen pengarahan selama pengembangan
+  </li>
+  <li>
+    <b><a href="#report">Laporan</a></b>: Panduan pelaporan harian dan minggun untuk tim pengembang
+  </li>
+</ul>
+
+<h2 id="#briefing">Arahan Tim Frontend Selama Pengembangan</h2>
 <p>Selamat datang di tim pengembangan frontend kami! Kami sangat senang Anda bergabung dengan tim ini untuk berkontribusi pada pengembangan aplikasi kami. Dokumen ini akan memberikan panduan dan informasi yang diperlukan untuk memulai.</p>
 
 <h3>Penjelasan singkat</h3>
@@ -92,7 +102,7 @@
 
 <p>Terima kasih atas dedikasi Anda untuk menjadi bagian dari tim frontend kami. Bersama-sama kita akan menciptakan pengalaman pengguna yang luar biasa!</p>
 
-<h2>Laporan Pekerjaan dan Kendala</h2>
+<h2 id="report">Laporan Pekerjaan dan Kendala</h2>
 <h3>Laporan Harian</h3>
 <p>Setiap anggota tim frontend diharapkan untuk melakukan pelaporan harian terkait perkembangan pekerjaan mereka dan melaporkan keluhan atau kesulitan yang mereka hadapi. Ini dapat dilakukan melalui platform Discord pada saluran yang telah disediakan untuk diskusi harian.</p>
 
