@@ -1,0 +1,13 @@
+.button1a,
+.button1b,
+.button1c {
+    display: block;
+    margin: 5px auto;
+    background: purple;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    outline: blue;
+    border: 1px solid transparent;
+}
