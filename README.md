@@ -50,10 +50,13 @@
     <b>HTML/CSS:</b>: Bahasa markup dan gaya dasar untuk mengatur tampilan dan struktur halaman.
   </li>
   <li>
-    <b>JavaScript</b>: Bahasa pemrograman untuk membuat tampilan interaktif dan fungsionalitas di sisi klien.
+    <b>Typescript</b>: Bahasa pemrograman untuk membuat tampilan interaktif dan fungsionalitas di sisi klien.
   </li>
   <li>
     <b>React.js</b>: Library JavaScript untuk membangun antarmuka pengguna yang dinamis dan interaktif.
+  </li>
+  <li>
+    <b>Vite</b>: Library JavaScript untuk membangun antarmuka pengguna yang dinamis dan interaktif.
   </li>
   <li>
     <b>Sass</b>: CSS Pre-processor untuk membantu programmer menulis sintaks css selama pengembangan.
