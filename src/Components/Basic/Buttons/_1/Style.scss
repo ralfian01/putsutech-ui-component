@@ -1,3 +1,5 @@
+// @import url("./../");
+
 .button1a,
 .button1b,
 .button1c {
@@ -10,4 +12,11 @@
     border-radius: 5px;
     outline: blue;
     border: 1px solid transparent;
+
+    img.trail {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        object-position: center;
+    }
 }

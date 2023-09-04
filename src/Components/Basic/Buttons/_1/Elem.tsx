@@ -1,4 +1,4 @@
-import "./Style.css";
+import "./Style.scss";
 
 // Props yang tersedia
 interface Props {
