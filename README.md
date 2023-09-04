@@ -3,9 +3,27 @@
 <h3>Navigasi</h3>
 <ul>
   <li>
+    <b><a href="#file_structure">Struktur file</a></b>: Panduan pembuatan direktori yang file yang berlaku
+  </li>
+  <li>
     <b><a href="#installation">Instalasi</a></b>: Panduan instalasi project pada komputer
   </li>
 </ul>
+
+<br> <br> <br>
+<h2 id="file_structure">Struktur file</h2>
+<p>Setiap komponen harus mengikuti struktur direktori dan file yang sudah ditetapkan seperti dibawah ini:</p>
+
+<pre class="notranslate">
+  <code>.
+    ├── src/Components/Basic             # Direktori utama tempat menyimpan komponen UI kategori <b>Basic</b> adalah <b>Components/Basic</b>
+    │  │  ├── [Nama Komponen]            # Misalnya Komponen bernama Buttons
+    │  │  │  ├── _[Versi Komponen]       # Misalnya komponen Button versi 1, maka penulisannya <b>"_1"</b>
+    │  │  │  │  ├── Elem.tsx             # Komponen React ditulis dengan nama File <b>"Elem.tsx"</b>, kemudian function-nya ditulis dengan format [Nama Komponen][Versi Komponen]. Contoh: <b>"Button1"</b>
+    │  │  │  │  ├── Style.scss           # File styling scss-nya harus ditulis dengan nama <b>"Style.scss"</b>
+    │  │  │  │  ├── [Asset]              # File asset lainnya yang hanya dipakai untuk komponen tertentu harus disimpan di dalam direktori komponen tersebut
+  </code>
+</pre>
 
 <br> <br> <br>
 <h2 id="installation">Instalasi</h2>
