@@ -56,7 +56,7 @@
     <b>React.js</b>: Library JavaScript untuk membangun antarmuka pengguna yang dinamis dan interaktif.
   </li>
   <li>
-    <b>Vite</b>: Library JavaScript untuk membangun antarmuka pengguna yang dinamis dan interaktif.
+    <b>Vite</b>: Alat pengembangan yang dilengkapi dengan server dev untuk memudahkan manajemen package dan dependency
   </li>
   <li>
     <b>Sass</b>: CSS Pre-processor untuk membantu programmer menulis sintaks css selama pengembangan.
