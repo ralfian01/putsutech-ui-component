@@ -1,5 +1,6 @@
 /**
  * Button level
+ * @enum {string}
  */
 export enum ButtonLevel {
     /** Primary level - Default */
@@ -17,6 +18,7 @@ export enum ButtonLevel {
 
 /**
  * Button type
+ * @enum {string}
  */
 export enum ButtonType {
     /** Regular type - Default */
@@ -31,6 +33,7 @@ export enum ButtonType {
 
 /**
  * Button size
+ * @enum {string}
  */
 export enum ButtonSize {
     /** Extra small size */

@@ -1,39 +1,55 @@
-import React, { ReactNode } from 'react';
-import * as Enum from "./Enum";
+import React from 'react';
+import * as ElemProps from "./ElemProps";
 import "./Style.scss";
 
-// Export Enum
-export { Enum };
+// Export ElemProps
+export { ElemProps };
 
-// Enum Prop for component
+// ElemProps Prop for component
 interface Props {
-    type?: Enum.ButtonType,
-    level?: Enum.ButtonLevel,
-    size?: Enum.ButtonSize,
-    style?: Object,
-    children?: ReactNode,
-    className?: String
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    className?: string,
+
+    // ### Additional props
+    type?: ElemProps.ButtonType,
+    level?: ElemProps.ButtonLevel,
+    size?: ElemProps.ButtonSize
 };
 
 // Default value for props component
 const defaultProps: Props = {
-    type: Enum.ButtonType.Regular,
-    level: Enum.ButtonLevel.Primary,
-    size: Enum.ButtonSize.Normal,
     style: {},
-    className: ''
+    className: '',
+    type: ElemProps.ButtonType.Regular,
+    level: ElemProps.ButtonLevel.Primary,
+    size: ElemProps.ButtonSize.Normal,
 }
 
-// Component
+/**
+ * UI Component
+ * @param {Props} props - Component properties
+ * @param {React.CSSProperties} props.style - Component style
+ * @param {string} props.className - Component className
+ * @param {ElemProps.ButtonType} props.type - Button type. (See ButtonType for valid value)
+ * @param {ElemProps.ButtonLevel} props.level - Button level. (See ButtonLevel for valid value)
+ * @param {ElemProps.ButtonSize} props.size - Button size. (See ButtonSize for valid value)
+ */
 const Component: React.FC<Props> = (props: Props) => {
     
-    const className = `button1 btn-${props.level} btn-${props.type} btn-${props.size}`;
-    const cssStyle = props.style;
+    const initialClass = `button1 btn-${props.level} btn-${props.type} btn-${props.size}`;
+    const initialStyle = {};
+    
+    // Merge class name
+    const componentClass = `${initialClass} ${props.className}`;
+
+    // Merge stylesheet
+    const componentStyle = Object.assign(initialStyle, props.style);
 
     return (
         <button
-            className={className}
-            style={cssStyle}
+            className={componentClass}
+            style={componentStyle}
         >
             {props.children}
         </button>
