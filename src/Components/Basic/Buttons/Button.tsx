@@ -4,6 +4,7 @@ export default function Button() {
 
     return (
         <>
+
             <Button1
                 type={Btn1Props.ButtonType.Regular}
                 size={Btn1Props.ButtonSize.Normal}
