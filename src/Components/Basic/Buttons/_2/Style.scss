@@ -1,4 +1,4 @@
-.button1 {
+.button2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,5 +67,19 @@
     }
     &.btn-circle {
         border-radius: 1000px;
+    }
+
+    .loader {
+        transform: rotate(0deg);
+        animation: loading 400ms infinite linear;
+
+        @keyframes loading {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
     }
 }

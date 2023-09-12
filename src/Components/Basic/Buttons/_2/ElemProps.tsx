@@ -1,22 +1,22 @@
-import { RiUploadCloud2Line, RiLoader4Line } from 'react-icons/ri';
+import { RiUploadCloud2Line, RiLoader4Line } from "react-icons/ri";
 
 /**
- * 
+ *
  * Button level
  * @enum {string}
  */
 export enum ButtonLevel {
-    /** Primary level - Default */
-    Primary = 'primary',
+	/** Primary level - Default */
+	Primary = "primary",
 
-    /** Secondary level */
-    Secondary = 'secondary',
+	/** Secondary level */
+	Secondary = "secondary",
 
-    /** Secondary level in black and white */
-    SecondaryBW = 'secondary-bw',
+	/** Secondary level in black and white */
+	SecondaryBW = "secondary-bw",
 
-    /** Secondary level in flat */
-    SecondaryFlat = 'secondary-flat'
+	/** Secondary level in flat */
+	SecondaryFlat = "secondary-flat",
 }
 
 /**
@@ -24,14 +24,26 @@ export enum ButtonLevel {
  * @enum {string}
  */
 export enum ButtonType {
-    /** Regular type - Default */
-    Regular = 'regular',
+	/** Regular type - Default */
+	Regular = "regular",
 
-    /** Circle type */
-    Circle = 'circle',
+	/** Circle type */
+	Circle = "circle",
 
-    /** Capsule type */
-    Capsule = 'capsule'
+	/** Capsule type */
+	Capsule = "capsule",
+}
+
+/**
+ * Button mode
+ * @enum {string}
+ */
+export enum ButtonMode {
+	/** Default mode - Default */
+	Default = "default",
+
+	/** Loader type */
+	Loader = "loader",
 }
 
 /**
@@ -39,32 +51,32 @@ export enum ButtonType {
  * @enum {string}
  */
 export enum ButtonSize {
-    /** Extra small size */
-    ExtraSmall = 'extsm',
-    
-    /** Small size */
-    Small = 'sm',
+	/** Extra small size */
+	ExtraSmall = "extsm",
 
-    /** Normal size - Default */
-    Normal = 'normal',
+	/** Small size */
+	Small = "sm",
 
-    /** Big size */
-    Big = 'big',
+	/** Normal size - Default */
+	Normal = "normal",
 
-    /** Extra big size */
-    ExtraBig = 'extbig'
+	/** Big size */
+	Big = "big",
+
+	/** Extra big size */
+	ExtraBig = "extbig",
 }
 
 /**
- * 
+ *
  * Button Icon
  */
 export enum ButtonIcon {
-    Upload,
-    Loader,
-  }
-  
-  export const ButtonIcons = {
-    [ButtonIcon.Upload]: <RiUploadCloud2Line />,
-    [ButtonIcon.Loader]: <RiLoader4Line />,
-  };
+	Upload,
+	Loader,
+}
+
+export const ButtonIcons = {
+	[ButtonIcon.Upload]: <RiUploadCloud2Line />,
+	[ButtonIcon.Loader]: <RiLoader4Line />,
+};
