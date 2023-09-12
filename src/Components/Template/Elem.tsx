@@ -15,7 +15,7 @@ interface Props {  // Jangan edit baris ini
                                     // Prop children adalah property bawaan yang wajib ditulis.
                                     // ReactNode artinya children hanya boleh diisi oleh oleh nilai bertipe  ReactNode.
 
-    className?: string              // Jangan edit baris ini.
+    className?: string,             // Jangan edit baris ini.
                                     // Prop className adalah property bawaan yang wajib ditulis.
                                     // String artinya className hanya boleh diisi oleh nilai bertipe String.
 
