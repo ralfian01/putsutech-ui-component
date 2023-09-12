@@ -1,30 +1,36 @@
-import React from 'react';
+import React from "react";
 import * as ElemProps from "./ElemProps";
 import "./Style.scss";
+import { RiLoader4Line } from "react-icons/ri";
 
 // Export ElemProps
 export { ElemProps };
 
 // ElemProps Prop for component
 interface Props {
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    className?: string,
+	style?: React.CSSProperties;
+	children?: React.ReactNode;
+	className?: string;
+	onClick?: React.ComponentState;
+	disabled?: boolean;
 
-    // ### Additional props
-    type?: ElemProps.ButtonType,
-    level?: ElemProps.ButtonLevel,
-    size?: ElemProps.ButtonSize
-};
+	// ### Additional props
+	type?: ElemProps.ButtonType;
+	level?: ElemProps.ButtonLevel;
+	size?: ElemProps.ButtonSize;
+	mode?: ElemProps.ButtonMode;
+}
 
 // Default value for props component
 const defaultProps: Props = {
-    style: {},
-    className: '',
-    type: ElemProps.ButtonType.Regular,
-    level: ElemProps.ButtonLevel.Primary,
-    size: ElemProps.ButtonSize.Normal,
-}
+	style: {},
+	className: "",
+	disabled: false,
+	type: ElemProps.ButtonType.Regular,
+	level: ElemProps.ButtonLevel.Primary,
+	size: ElemProps.ButtonSize.Normal,
+	mode: ElemProps.ButtonMode.Default,
+};
 
 /**
  * UI Component
@@ -36,24 +42,28 @@ const defaultProps: Props = {
  * @param {ElemProps.ButtonSize} props.size - Button size. (See ButtonSize for valid value)
  */
 const Component: React.FC<Props> = (props: Props) => {
-    
-    const initialClass = `button1 btn-${props.level} btn-${props.type} btn-${props.size}`;
-    const initialStyle = {};
-    
-    // Merge class name
-    const componentClass = `${initialClass} ${props.className}`;
+	const initialClass = `button1 btn-${props.level} btn-${props.type} btn-${props.size}`;
+	const initialStyle = {};
 
-    // Merge stylesheet
-    const componentStyle = Object.assign(initialStyle, props.style);
+	// Merge class name
+	const componentClass = `${initialClass} ${props.className}`;
 
-    return (
-        <button
-            className={componentClass}
-            style={componentStyle}
-        >
-            {props.children}
-        </button>
-    );
+	// Merge stylesheet
+	const componentStyle = Object.assign(initialStyle, props.style);
+
+	return (
+		<button
+			className={componentClass}
+			style={componentStyle}
+			onClick={props.onClick}
+			disabled={props.disabled}>
+			{props.mode == "loading" ? (
+				<RiLoader4Line className="loader" />
+			) : (
+				props.children
+			)}
+		</button>
+	);
 };
 
 // Apply default props

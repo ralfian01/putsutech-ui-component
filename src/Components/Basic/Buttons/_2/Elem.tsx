@@ -1,11 +1,7 @@
 import React from "react";
 import * as ElemProps from "./ElemProps";
 import "./Style.scss";
-import {
-	RiUploadCloud2Line,
-	RiUploadCloud2Fill,
-	RiLoader4Line,
-} from "react-icons/ri";
+import { RiLoader4Line } from "react-icons/ri";
 
 // Export ElemProps
 export { ElemProps };
@@ -15,6 +11,9 @@ interface Props {
 	style?: React.CSSProperties;
 	children?: React.ReactNode;
 	className?: string;
+	onClick?: React.ComponentState;
+	onHover?: React.ComponentState;
+	disabled?: boolean;
 
 	// ### Additional props
 	type?: ElemProps.ButtonType;
@@ -32,6 +31,7 @@ const defaultProps: Props = {
 	level: ElemProps.ButtonLevel.Primary,
 	size: ElemProps.ButtonSize.Normal,
 	icon: ElemProps.ButtonIcon.Upload,
+	mode: ElemProps.ButtonMode.Default,
 };
 
 /**
@@ -43,6 +43,7 @@ const defaultProps: Props = {
  * @param {ElemProps.ButtonLevel} props.level - Button level. (See ButtonLevel for valid value)
  * @param {ElemProps.ButtonSize} props.size - Button size. (See ButtonSize for valid value)
  * @param {ElemProps.ButtonIcon} props.icon - Button icon. (See ButtonIcon for valid value)
+ * @param {ElemProps.ButtonMode} props.mode - Button mode. (See ButtonMode for valid value)
  */
 const Component: React.FC<Props> = (props: Props) => {
 	const initialClass = `button2 btn-${props.level} btn-${props.type} btn-${props.size}`;
@@ -60,7 +61,11 @@ const Component: React.FC<Props> = (props: Props) => {
 	const componentIcon = initialIcon;
 
 	return (
-		<button className={componentClass} style={componentStyle}>
+		<button
+			className={componentClass}
+			style={componentStyle}
+			onClick={props.onClick}
+			disabled={props.disabled}>
 			{props.mode == "loader" ? (
 				<RiLoader4Line className="loader" />
 			) : (

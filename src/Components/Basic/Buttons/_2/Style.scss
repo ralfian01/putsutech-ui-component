@@ -9,9 +9,14 @@
     text-align: center;
     line-height: var(--lineHeightButton);
     font-family: var(--fontNunitoSans);
+    stroke-width: var(--strokeWidthButton);
 
     &:hover {
         filter: brightness(110%);
+    }
+
+    &:focus {
+        outline: 2px solid var(--colorOutline);
     }
 
     // Button level
@@ -19,21 +24,61 @@
         background: var(--colorPrimary);
         color: var(--colorWhite);
         border: 1px solid var(--colorPrimary);
+
+        &:has(svg.loader),
+        &:has(i.loader) {
+
+            &[disabled] {
+                background: var(--colorPrimary);
+                color: var(--colorWhite);
+                border: 1px solid var(--colorPrimary);
+            }
+        }
     }
     &.btn-secondary {
         background: var(--colorWhite);
         color: var(--colorPrimary);
         border: 1px solid var(--colorPrimary);
+
+        &:has(svg.loader),
+        &:has(i.loader) {
+    
+            &[disabled] {
+                background: var(--colorWhite);
+                color: var(--colorPrimary);
+                border: 1px solid var(--colorPrimary);
+            }
+        }
     }
     &.btn-secondary-bw {
         background: var(--colorWhite);
         color: var(--colorBlack);
         border: 1px solid var(--colorBlack);
+
+        &:has(svg.loader),
+        &:has(i.loader) {
+    
+            &[disabled] {
+                background: var(--colorWhite);
+                color: var(--colorPrimary);
+                border: 1px solid var(--colorPrimary);
+            }
+        }
     }
     &.btn-secondary-flat {
         background: var(--colorWhite);
         color: var(--colorPrimary);
         border: 1px solid var(--colorWhite);
+
+        &:has(svg.loader),
+        &:has(i.loader) {
+    
+            &[disabled] {
+                background: var(--colorWhite);
+                color: var(--colorPrimary);
+                border: 1px solid var(--colorWhite);
+            }
+        }
     }
 
     // Button size
@@ -69,6 +114,18 @@
         border-radius: 1000px;
     }
 
+    // When button disabled
+    &[disabled] {
+        background: var(--colorDisabled);
+        border-color: var(--colorDisabled);
+        color: var(--colorGreySoft);
+        cursor: default;
+
+        &:hover {
+            filter: none;
+        }
+    }
+
     .loader {
         transform: rotate(0deg);
         animation: loading 400ms infinite linear;
@@ -77,6 +134,7 @@
             from {
                 transform: rotate(0deg);
             }
+
             to {
                 transform: rotate(359deg);
             }
