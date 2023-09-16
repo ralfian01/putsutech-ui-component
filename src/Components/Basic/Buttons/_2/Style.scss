@@ -21,6 +21,10 @@
         color: var(--colorGreySoft);
     }
 
+    &:focus {
+        outline: 2px solid var(--colorOutline);
+    }
+
     // Button level
     &.btn-primary {
         background: var(--colorPrimary);
@@ -34,6 +38,7 @@
             background-color: var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
+
         }
     }
 
@@ -77,6 +82,7 @@
             background-color: var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
+
         }
     }
     &.btn-secondary-flat {
@@ -97,6 +103,7 @@
             background-color: var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
+
         }
     }
 
@@ -138,13 +145,16 @@
         transform: rotate(0deg);
         animation: loading 800ms infinite linear;
 
+
         @keyframes loading {
             from {
                 transform: rotate(0deg);
             }
+
             to {
                 transform: rotate(359deg);
             }
         }
     }
 }
+

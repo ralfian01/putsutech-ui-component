@@ -75,4 +75,5 @@ export const ButtonIcon = {
 
     /**Google icon */
     Google: <FcGoogle className />,
-};
+
+}

@@ -17,10 +17,12 @@ interface Props {
     level?: ElemProps.ButtonLevel;
     size?: ElemProps.ButtonSize;
     icon?: React.ReactNode;
+
 }
 
 // Default value for props component
 const defaultProps: Props = {
+
     style: {},
     className: "",
     type: ElemProps.ButtonType.Regular,
@@ -39,6 +41,7 @@ const defaultProps: Props = {
  * @param {ElemProps.ButtonLevel} props.level - Button level. (See ButtonLevel for valid value)
  * @param {ElemProps.ButtonSize} props.size - Button size. (See ButtonSize for valid value)
  * @param {ElemProps.ButtonIcon} props.icon - Button icon. (See ButtonIcon for valid value)
+ * @param {ElemProps.ButtonMode} props.mode - Button mode. (See ButtonMode for valid value)
  */
 const Component: React.FC<Props> = (props: Props) => {
     const initialClass = `button2 btn-${props.level} btn-${props.type} btn-${props.size}`;
@@ -49,8 +52,8 @@ const Component: React.FC<Props> = (props: Props) => {
         props.disabled ? `btn-disabled` : ""
     }`;
 
-    // Merge stylesheet
-    const componentStyle = Object.assign(initialStyle, props.style);
+	// Merge stylesheet
+	const componentStyle = Object.assign(initialStyle, props.style);
 
     return (
         <button
@@ -61,6 +64,7 @@ const Component: React.FC<Props> = (props: Props) => {
             {props.children}
         </button>
     );
+
 };
 
 // Apply default props

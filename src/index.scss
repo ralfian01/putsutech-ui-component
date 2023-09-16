@@ -44,13 +44,16 @@
     --lineHeightButton: 1;
     --lineHeightParagraph: 1.5;
 
-    // Heading size
-    --heading1: 1.69rem;
-    --heading2: 1.56rem;
-    --heading3: 1.41rem;
-    --heading4: 1.28rem;
-    --heading5: 1.14rem;
-    --heading6: 1rem;
+  // Heading size
+  --heading1: 1.69rem;
+  --heading2: 1.56rem;
+  --heading3: 1.41rem;
+  --heading4: 1.28rem;
+  --heading5: 1.14rem;
+  --heading6: 1rem;
+
+  // Stroke width
+  --strokeWidthButton: 30px;
 }
 
 body {
