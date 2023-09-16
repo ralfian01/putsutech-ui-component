@@ -11,23 +11,17 @@ interface Props {
     children?: React.ReactNode;
     className?: string;
     disabled?: boolean;
+    mode?: string;
 
     // ### Additional props
-    type?: ElemProps.ButtonType;
-    level?: ElemProps.ButtonLevel;
-    size?: ElemProps.ButtonSize;
-    icon?: React.ReactNode;
+    type?: ElemProps.RadioType;
 }
 
 // Default value for props component
 const defaultProps: Props = {
     style: {},
     className: "",
-    type: ElemProps.ButtonType.Regular,
-    level: ElemProps.ButtonLevel.Primary,
-    size: ElemProps.ButtonSize.Normal,
-    icon: ElemProps.ButtonIcon.Loader,
-    disabled: false,
+    mode: "",
 };
 
 /**
@@ -35,31 +29,41 @@ const defaultProps: Props = {
  * @param {Props} props - Component properties
  * @param {React.CSSProperties} props.style - Component style
  * @param {string} props.className - Component className
- * @param {ElemProps.ButtonType} props.type - Button type. (See ButtonType for valid value)
- * @param {ElemProps.ButtonLevel} props.level - Button level. (See ButtonLevel for valid value)
- * @param {ElemProps.ButtonSize} props.size - Button size. (See ButtonSize for valid value)
- * @param {ElemProps.ButtonIcon} props.icon - Button icon. (See ButtonIcon for valid value)
+ * @param {ElemProps.RadioType} props.type - Radio type. (See RadioType for valid value)
+ * @param {ElemProps.RadioLevel} props.level - Radio level. (See RadioLevel for valid value)
+ * @param {ElemProps.RadioSize} props.size - Radio size. (See RadioSize for valid value)
  */
+
 const Component: React.FC<Props> = (props: Props) => {
-    const initialClass = `button2 btn-${props.level} btn-${props.type} btn-${props.size}`;
+    const initialClass = `radio1 radio-${props.type}`;
     const initialStyle = {};
-    const intialIcon = props.icon;
+
     // Merge class name
     const componentClass = `${initialClass} ${props.className} ${
-        props.disabled ? `btn-disabled` : ""
+        props.disabled ? `${initialClass} radio-disabled` : ""
     }`;
 
     // Merge stylesheet
     const componentStyle = Object.assign(initialStyle, props.style);
 
     return (
-        <button
+        <div
             className={componentClass}
             style={componentStyle}
         >
-            {intialIcon}
+            <input
+                type="radio"
+                name={props.type}
+            />
             {props.children}
-        </button>
+            <div className={`radio-${props.type}`}>
+                {props.type === "description"
+                    ? props.mode
+                    : props.type === "description-inline"
+                    ? props.mode
+                    : null}
+            </div>
+        </div>
     );
 };
 

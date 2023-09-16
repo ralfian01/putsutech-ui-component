@@ -1,39 +1,103 @@
-.button1 {
+.button2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 6px;
     box-sizing: border-box;
     font-weight: var(--fontSemiBold);
     font-size: var(--fontNormal);
     text-align: center;
     line-height: var(--lineHeightButton);
     font-family: var(--fontNunitoSans);
+    cursor: pointer;
+    border: 1px solid var(--colorPrimary);
 
     &:hover {
         filter: brightness(110%);
+    }
+    &.btn-disabled {
+        cursor: not-allowed;
+        border: 1px solid var(--colorDisabled);
+        color: var(--colorGreySoft);
     }
 
     // Button level
     &.btn-primary {
         background: var(--colorPrimary);
         color: var(--colorWhite);
-        border: 1px solid var(--colorPrimary);
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            background-color: var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+        }
     }
+
     &.btn-secondary {
         background: var(--colorWhite);
         color: var(--colorPrimary);
         border: 1px solid var(--colorPrimary);
+
+        &:hover {
+            background: #5656bc14;
+        }
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+            &:hover{
+                background-color: var(--colorWhite);
+            }
+        }
     }
     &.btn-secondary-bw {
         background: var(--colorWhite);
         color: var(--colorBlack);
         border: 1px solid var(--colorBlack);
+
+        &:hover {
+            background: rgba(32, 32, 32, 0.08);
+        }
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            background-color: var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+        }
     }
     &.btn-secondary-flat {
         background: var(--colorWhite);
         color: var(--colorPrimary);
         border: 1px solid var(--colorWhite);
+
+        &:hover {
+            background: #5656bc14;
+        }
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            background-color: var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+        }
     }
 
     // Button size
@@ -66,6 +130,21 @@
         border-radius: 100px;
     }
     &.btn-circle {
-        border-radius: 1000px;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    .loader {
+        transform: rotate(0deg);
+        animation: loading 800ms infinite linear;
+
+        @keyframes loading {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
     }
 }

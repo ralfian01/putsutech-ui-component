@@ -4,66 +4,66 @@
 
 // Variables
 :root {
-  // Colors
-  --colorPrimary: #5656bc;
-  --colorDisabled: #DADADA;
-  --colorWhite: #ffffff;
-  --colorBlack: #202020;
-  --colorGreySoft: #969696;
-  --colorGreyDark: #7d7d7d;
-  --colorRed: #EB554B;
-  --colorGreen: #1BCB8C;
-  --colorBlue: #47A2F7;
-  --colorOrange: #F4AA1B;
-  --colorYellow: #FFD600;
-  --colorOutline: #563CD6;
-  --colorOutlineDark: #BD72F8;
+    // Colors
+    --colorPrimary: #5656bc;
+    --colorDisabled: #dadada;
+    --colorWhite: #ffffff;
+    --colorBlack: #202020;
+    --colorGreySoft: #969696;
+    --colorGreyDark: #7d7d7d;
+    --colorRed: #eb554b;
+    --colorGreen: #1bcb8c;
+    --colorBlue: #47a2f7;
+    --colorOrange: #f4aa1b;
+    --colorYellow: #ffd600;
+    --colorOutline: #563cd6;
+    --colorOutlineDark: #bd72f8;
 
-  // Font family
-  --fontMontSerrat: "Montserrat", sans-serif;
-  --fontNunitoSans: "Nunito Sans", sans-serif;
+    // Font family
+    --fontMontSerrat: "Montserrat", sans-serif;
+    --fontNunitoSans: "Nunito Sans", sans-serif;
 
-  // Initial font size
-  --initialFontSize: 15.25px;
+    // Initial font size
+    --initialFontSize: 15.25px;
 
-  // Font size (Based on initial font size)
-  --fontExtraSmall: 0.74rem;
-  --fontSmall: 0.87rem;
-  --fontNormal: 1rem;
-  --fontBig: 1.14rem;
-  --fontExtraBig: 1.28rem;
+    // Font size (Based on initial font size)
+    --fontExtraSmall: 0.74rem;
+    --fontSmall: 0.87rem;
+    --fontNormal: 1rem;
+    --fontBig: 1.14rem;
+    --fontExtraBig: 1.28rem;
 
-  // Font weight
-  --fontLight: 300;
-  --fontRegular: 400;
-  --fontSemiBold: 600;
-  --fontBold: 700;
-  --fontExtraBold: 800;
+    // Font weight
+    --fontLight: 300;
+    --fontRegular: 400;
+    --fontSemiBold: 600;
+    --fontBold: 700;
+    --fontExtraBold: 800;
 
-  // Line height
-  --lineHeightButton: 1;
-  --lineHeightParagraph: 1.5;
+    // Line height
+    --lineHeightButton: 1;
+    --lineHeightParagraph: 1.5;
 
-  // Heading size
-  --heading1: 1.69rem;
-  --heading2: 1.56rem;
-  --heading3: 1.41rem;
-  --heading4: 1.28rem;
-  --heading5: 1.14rem;
-  --heading6: 1rem;
+    // Heading size
+    --heading1: 1.69rem;
+    --heading2: 1.56rem;
+    --heading3: 1.41rem;
+    --heading4: 1.28rem;
+    --heading5: 1.14rem;
+    --heading6: 1rem;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--fontNunitoSans);
-  font-size: var(--initialFontSize);
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: var(--colorBlack);
-  background: var(--colorWhite);
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontNunitoSans);
+    font-size: var(--initialFontSize);
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--colorBlack);
+    background: var(--colorWhite);
 }
 
 // Headings

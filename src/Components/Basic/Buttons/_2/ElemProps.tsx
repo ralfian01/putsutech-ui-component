@@ -1,22 +1,30 @@
-import { RiUploadCloud2Line, RiLoader4Line } from 'react-icons/ri';
+/**
+ * ElemProps Button version 2
+ */
+
+import { RiUploadCloud2Line, RiLoader4Line } from "react-icons/ri"; //import remix icon upload and loader
+import { FcGoogle } from "react-icons/fc"; //import google icon
 
 /**
- * 
+ *
  * Button level
  * @enum {string}
  */
 export enum ButtonLevel {
     /** Primary level - Default */
-    Primary = 'primary',
+    Primary = "primary",
 
     /** Secondary level */
-    Secondary = 'secondary',
+    Secondary = "secondary",
 
     /** Secondary level in black and white */
-    SecondaryBW = 'secondary-bw',
+    SecondaryBW = "secondary-bw",
 
     /** Secondary level in flat */
-    SecondaryFlat = 'secondary-flat'
+    SecondaryFlat = "secondary-flat",
+
+    /** Disabled level */
+    Disabled = "disabled",
 }
 
 /**
@@ -25,13 +33,13 @@ export enum ButtonLevel {
  */
 export enum ButtonType {
     /** Regular type - Default */
-    Regular = 'regular',
+    Regular = "regular",
 
     /** Circle type */
-    Circle = 'circle',
+    Circle = "circle",
 
     /** Capsule type */
-    Capsule = 'capsule'
+    Capsule = "capsule",
 }
 
 /**
@@ -40,31 +48,31 @@ export enum ButtonType {
  */
 export enum ButtonSize {
     /** Extra small size */
-    ExtraSmall = 'extsm',
-    
+    ExtraSmall = "extsm",
+
     /** Small size */
-    Small = 'sm',
+    Small = "sm",
 
     /** Normal size - Default */
-    Normal = 'normal',
+    Normal = "normal",
 
     /** Big size */
-    Big = 'big',
+    Big = "big",
 
     /** Extra big size */
-    ExtraBig = 'extbig'
+    ExtraBig = "extbig",
 }
 
 /**
- * 
  * Button Icon
  */
-export enum ButtonIcon {
-    Upload,
-    Loader,
-  }
-  
-  export const ButtonIcons = {
-    [ButtonIcon.Upload]: <RiUploadCloud2Line />,
-    [ButtonIcon.Loader]: <RiLoader4Line />,
-  };
+export const ButtonIcon = {
+    /** Upload icon */
+    Upload: <RiUploadCloud2Line />,
+
+    /** Loader icon */
+    Loader: <RiLoader4Line />,
+
+    /**Google icon */
+    Google: <FcGoogle className />,
+};
