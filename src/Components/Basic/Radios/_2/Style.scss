@@ -1,0 +1,145 @@
+.radio2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+
+    .radio {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 100px;
+        background: var(--colorWhite);
+        border: 1px solid var(--colorGreySoft);
+        position: relative;
+
+        input {
+            opacity: 0;
+        }
+    }
+
+    .label {
+        display: block;
+        width: 100%;
+        font-weight: var(--fontSemiBold);
+        color: var(--colorBlack);
+    }
+
+    .description {
+        display: block;
+        width: 100%;
+        font-weight: var(--fontRegular);
+        color: var(--colorGreySoft);
+    }
+
+    &.radio-inline {
+        .label {
+            width: fit-content;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    
+        .description {
+            width: fit-content;
+            display: inline-block;
+        }
+    }
+
+    &.radio-normal {
+        .label {
+            width: 100%;
+            display: block;
+        }
+    
+        .description {
+            width: 100%;
+            display: block;
+        }
+
+    }
+
+    // Unselected Radio focus
+    &:focus-within {
+
+        .radio {
+            outline: 2px solid var(--colorOutline);
+        }
+    }
+
+    // Unselected Radio hover
+    &:hover:not(:has(.radio input[disabled])) {
+        cursor: pointer;
+
+        .radio {
+            border-color: var(--colorBlack);
+        }
+    }
+
+    // Unselected Radio disabled
+    &:has(input[disabled]) {
+
+        .radio {
+            background: var(--colorDisabled);
+            border-color: var(--colorGreySoft);
+        }
+
+        .label {
+            color: var(--colorGreySoft);
+        }
+
+        .description {
+            color: var(--colorGreySoft);
+        }
+    }
+
+    // Selected Radio
+    &:has(input:checked) {
+
+        .radio {
+            background: var(--colorPrimary);
+            border-color: var(--colorPrimary);
+        
+            &::before {
+                display: block;
+                width: 60%;
+                height: 60%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100px;
+                background: var(--colorWhite);
+                content: '';
+            }
+        }
+
+        // Selected Radio Hover
+        &:hover:not(:has(.radio input[disabled])) {
+            .radio {
+                filter: brightness(125%);
+                border-color: var(--colorPrimary);
+            }
+        }
+
+        // Selected Radio Disabled
+        &:has(input[disabled]) {
+
+            .radio {
+                background: var(--colorDisabled);
+                border-color: var(--colorDisabled);
+            
+                &::before {
+                    background: var(--colorGreySoft);
+                }
+            }
+
+            .label {
+                color: var(--colorGreySoft);
+            }
+
+            .description {
+                color: var(--colorGreySoft);
+            }
+        }
+    }
+}
