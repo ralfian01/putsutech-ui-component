@@ -1,8 +1,18 @@
 import Button from "./Basic/Buttons/Button";
-
-export default function Component() {
-
-    return (
-        <Button />
-    );
+import Radio from "./Basic/Radios/Radio";
+function Component() {
+    return(<div></div>);
 }
+
+function button() {
+    return <Button />
+}
+
+function radio() {
+    return <Radio />
+}
+
+Component.button = button;
+Component.radio = radio;
+
+export default Component

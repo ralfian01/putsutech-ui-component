@@ -2,17 +2,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 6px;
     box-sizing: border-box;
     font-weight: var(--fontSemiBold);
     font-size: var(--fontNormal);
     text-align: center;
     line-height: var(--lineHeightButton);
     font-family: var(--fontNunitoSans);
-    stroke-width: var(--strokeWidthButton);
+    cursor: pointer;
+    border: 1px solid var(--colorPrimary);
 
     &:hover {
         filter: brightness(110%);
+    }
+    &.btn-disabled {
+        cursor: not-allowed;
+        border: 1px solid var(--colorDisabled);
+        color: var(--colorGreySoft);
     }
 
     &:focus {
@@ -23,30 +29,38 @@
     &.btn-primary {
         background: var(--colorPrimary);
         color: var(--colorWhite);
-        border: 1px solid var(--colorPrimary);
 
-        &:has(svg.loader),
-        &:has(i.loader) {
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            background-color: var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
 
-            &[disabled] {
-                background: var(--colorPrimary);
-                color: var(--colorWhite);
-                border: 1px solid var(--colorPrimary);
-            }
         }
     }
+
     &.btn-secondary {
         background: var(--colorWhite);
         color: var(--colorPrimary);
         border: 1px solid var(--colorPrimary);
 
-        &:has(svg.loader),
-        &:has(i.loader) {
-    
-            &[disabled] {
-                background: var(--colorWhite);
-                color: var(--colorPrimary);
-                border: 1px solid var(--colorPrimary);
+        &:hover {
+            background: #5656bc14;
+        }
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+            &:hover{
+                background-color: var(--colorWhite);
             }
         }
     }
@@ -55,14 +69,20 @@
         color: var(--colorBlack);
         border: 1px solid var(--colorBlack);
 
-        &:has(svg.loader),
-        &:has(i.loader) {
-    
-            &[disabled] {
-                background: var(--colorWhite);
-                color: var(--colorPrimary);
-                border: 1px solid var(--colorPrimary);
-            }
+        &:hover {
+            background: rgba(32, 32, 32, 0.08);
+        }
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            background-color: var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+
         }
     }
     &.btn-secondary-flat {
@@ -70,14 +90,20 @@
         color: var(--colorPrimary);
         border: 1px solid var(--colorWhite);
 
-        &:has(svg.loader),
-        &:has(i.loader) {
-    
-            &[disabled] {
-                background: var(--colorWhite);
-                color: var(--colorPrimary);
-                border: 1px solid var(--colorWhite);
-            }
+        &:hover {
+            background: #5656bc14;
+        }
+
+        &:focus {
+            border: 1px solid #3e008e;
+        }
+
+        &.btn-disabled {
+            border: 1px solid var(--colorDisabled);
+            background-color: var(--colorDisabled);
+            color: var(--colorGreySoft);
+            filter: grayscale(100%);
+
         }
     }
 
@@ -111,24 +137,14 @@
         border-radius: 100px;
     }
     &.btn-circle {
-        border-radius: 1000px;
-    }
-
-    // When button disabled
-    &[disabled] {
-        background: var(--colorDisabled);
-        border-color: var(--colorDisabled);
-        color: var(--colorGreySoft);
-        cursor: default;
-
-        &:hover {
-            filter: none;
-        }
+        border-radius: 50%;
+        padding: 5px;
     }
 
     .loader {
         transform: rotate(0deg);
-        animation: loading 400ms infinite linear;
+        animation: loading 800ms infinite linear;
+
 
         @keyframes loading {
             from {
@@ -141,3 +157,4 @@
         }
     }
 }
+

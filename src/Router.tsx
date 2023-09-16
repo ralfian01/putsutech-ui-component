@@ -5,7 +5,8 @@ export default function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/buttons" element={<Component />} />
+                <Route path="/buttons" element={<Component.button />} />
+                <Route path="/radios" element={<Component.radio />} />
             </Routes>
         </BrowserRouter>
     );
