@@ -7,6 +7,8 @@ export default function Router() {
             <Routes>
                 <Route path="/buttons" element={<Component.button />} />
                 <Route path="/radios" element={<Component.radio />} />
+                <Route path="/checks" element={<Component.check />} />
+                <Route path="/toggles" element={<Component.toggle />} />
             </Routes>
         </BrowserRouter>
     );

@@ -40,7 +40,7 @@ const Component: React.FC<Props> = (props: Props) => {
 
     // Merge class name
     const componentClass = `${initialClass} ${props.className} ${
-        props.disabled ? `${initialClass} radio-disabled` : ""
+        props.disabled ? `radio-disabled` : ""
     }`;
 
     // Merge stylesheet
@@ -51,10 +51,10 @@ const Component: React.FC<Props> = (props: Props) => {
             className={componentClass}
             style={componentStyle}
         >
-            <input
-                type="radio"
-                name={props.type}
-            />
+            <label htmlFor="">
+                <input type="radio"  name={props.type}/>
+                
+            </label>
             {props.children}
             <div className={`radio-${props.type}`}>
                 {props.type === "description"

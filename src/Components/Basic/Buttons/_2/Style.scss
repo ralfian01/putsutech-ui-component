@@ -17,7 +17,7 @@
     }
     &.btn-disabled {
         cursor: not-allowed;
-        border: 1px solid var(--colorDisabled);
+        // border: 1px solid var(--colorDisabled);
         color: var(--colorGreySoft);
     }
 
@@ -38,7 +38,7 @@
             background-color: var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
-
+            outline: none;
         }
     }
 
@@ -59,6 +59,7 @@
             border: 1px solid var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
+            outline: none;
             &:hover{
                 background-color: var(--colorWhite);
             }
@@ -82,9 +83,12 @@
             background-color: var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
+            outline: none;
 
         }
     }
+    
+    // button Secondary flat
     &.btn-secondary-flat {
         background: var(--colorWhite);
         color: var(--colorPrimary);
@@ -103,6 +107,7 @@
             background-color: var(--colorDisabled);
             color: var(--colorGreySoft);
             filter: grayscale(100%);
+            outline: none;
 
         }
     }

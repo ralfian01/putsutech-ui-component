@@ -65,6 +65,7 @@ export enum ButtonSize {
 
 /**
  * Button Icon
+ * @enum {icon}
  */
 export const ButtonIcon = {
     /** Upload icon */
@@ -74,6 +75,6 @@ export const ButtonIcon = {
     Loader: <RiLoader4Line />,
 
     /**Google icon */
-    Google: <FcGoogle className />,
+    Google: <FcGoogle />,
 
 }
