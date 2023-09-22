@@ -11,7 +11,7 @@ export default function Radio() {
 			</Radio1>
 			<Radio1
 				type={Radio1Props.RadioType.Description}
-				style={{ margin: "auto", marginTop: "15px" }}
+				style={{ margin: "auto", marginTop: "15px" }} 
 				mode="Lorem ipsum dolor sit amet.">
 				Radio Label
 			</Radio1>

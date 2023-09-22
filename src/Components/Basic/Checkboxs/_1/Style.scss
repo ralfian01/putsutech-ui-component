@@ -1,0 +1,146 @@
+// svg checkbox
+$CentangCheckBox: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="white"><path d="M3.75001 5.35295L9.16668 0L10 0.82353L3.75001 7L0 3.29414L0.833331 2.47062L3.75001 5.35295Z" fill="white"/></svg>';
+
+.checkbox1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+
+  .check {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background: var(--colorWhite);
+    border: 1px solid var(--colorGreySoft);
+    position: relative;
+
+    input {
+      opacity: 0;
+    }
+  }
+
+  .label {
+    display: block;
+    width: 100%;
+    font-weight: var(--fontSemiBold);
+    color: var(--colorBlack);
+  }
+
+  .description {
+    display: block;
+    width: 100%;
+    font-weight: var(--fontRegular);
+    color: var(--colorGreySoft);
+  }
+  
+  //   default Checkbox
+    &.check-normal {
+      .label {
+        width: 100%;
+        display: block;
+      }
+  
+      .description {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    // Inline Checkbox
+  &.check-inline {
+    .label {
+      width: fit-content;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .description {
+      width: fit-content;
+      display: inline-block;
+    }
+  }
+
+  // Unselected check focus
+  &:focus-within {
+    .check {
+      outline: 2px solid var(--colorOutline);
+    }
+  }
+
+  // Unselected check hover
+  &:hover:not(:has(.check input[disabled])) {
+    cursor: pointer;
+
+    .check {
+      border-color: var(--colorBlack);
+    }
+  }
+
+  // Unselected check disabled
+  &:has(input[disabled]) {
+    .check {
+      background: var(--colorDisabled);
+      border-color: var(--colorGreySoft);
+    }
+
+    .label {
+      color: var(--colorGreySoft);
+    }
+
+    .description {
+      color: var(--colorGreySoft);
+    }
+  }
+
+  // Selected check
+  &:has(input:checked) {
+    .check {
+      background: var(--colorPrimary);
+      border-color: var(--colorPrimary);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 70%; 
+        height: 70%;
+        background-image: url('#{$CentangCheckBox}');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    // Selected check Hover
+    &:hover:not(:has(.check input[disabled])) {
+      .check {
+        filter: brightness(125%);
+        border-color: var(--colorPrimary);
+      }
+    }
+
+    // Selected check Disabled
+    &:has(input[disabled]) {
+      .check {
+        background: var(--colorDisabled);
+        border-color: var(--colorDisabled);
+
+        &::before {
+          background-image: url('#{$CentangCheckBox}');
+        }
+      }
+
+      .label {
+        color: var(--colorGreySoft);
+      }
+
+      .description {
+        color: var(--colorGreySoft);
+      }
+    }
+  }
+}

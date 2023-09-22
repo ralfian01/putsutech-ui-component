@@ -35,8 +35,7 @@ const defaultProps: Props = {
  * @param {string} props.className - Component className
  * @param {ElemProps.RadioType} props.type - Radio type. (See RadioType for valid value)
  * @param {ElemProps.RadioLevel} props.level - Radio level. (See RadioLevel for valid value)
- * @param {ElemProps.RadioSize} props.size - Radio size. (See RadioSize for valid value)
- */
+ * */
 
 const Component: React.FC<Props> = (props: Props) => {
 	const initialClass = `radio2 radio-${props.type}`;

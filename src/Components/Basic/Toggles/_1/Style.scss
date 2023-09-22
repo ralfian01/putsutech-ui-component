@@ -1,0 +1,153 @@
+.toggle1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+
+  .toggle {
+    flex-shrink: 0;
+    width: 48px;
+    height: 24px;
+    border-radius: 100px;
+    background: var(--colorGreySoft);
+    border: 1px solid var(--colorGreySoft);
+    position: relative;
+
+    input {
+      opacity: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      transform: translate(0, -50%);
+      background: var(--colorWhite);
+      width: 20px;
+      height: 20px;
+      border-radius: 100px;
+      content: '';
+      transition: 350ms;;
+    }
+  }
+
+  .label {
+    display: block;
+    width: 100%;
+    font-weight: var(--fontSemiBold);
+    color: var(--colorBlack);
+  }
+
+  .description {
+    display: block;
+    width: 100%;
+    font-weight: var(--fontRegular);
+    color: var(--colorGreySoft);
+  }
+  
+  //   default togglebox
+    &.toggle-normal {
+      .label {
+        width: 100%;
+        display: block;
+      }
+  
+      .description {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    // Inline togglebox
+  &.toggle-inline {
+    align-items: center;
+
+    .label {
+      width: fit-content;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .description {
+      width: fit-content;
+      display: inline-block;
+    }
+  }
+
+  // Unselected toggle focus
+  &:focus-within {
+    .toggle {
+      outline: 2px solid var(--colorOutline);
+    }
+  }
+
+  // Unselected toggle hover
+  &:hover:not(:has(.toggle input[disabled])) {
+    cursor: pointer;
+
+    .toggle {
+      filter: brightness(125%);
+    }
+  }
+
+  // Unselected toggle disabled
+  &:has(input[disabled]) {
+    .toggle {
+      background: var(--colorDisabled);
+      border-color: var(--colorDisabled);
+
+      &::before {
+        background: var(--colorGreySoft);
+      }
+    }
+
+    .label {
+      color: var(--colorGreySoft);
+    }
+
+    .description {
+      color: var(--colorGreySoft);
+    }
+  }
+
+  // Selected toggle
+  &:has(input:checked) {
+    .toggle {
+      background: var(--colorPrimary);
+      border-color: var(--colorPrimary);
+
+      &::before {
+        left: calc(100% - 2px);
+        transform: translate(-100%, -50%);
+      }
+    }
+
+    // Selected toggle Hover
+    &:hover:not(:has(.toggle input[disabled])) {
+      .toggle {
+        filter: brightness(125%);
+        border-color: var(--colorPrimary);
+      }
+    }
+
+    // Selected toggle Disabled
+    &:has(input[disabled]) {
+      .toggle {
+        background: var(--colorDisabled);
+        border-color: var(--colorDisabled);
+
+        &::before {
+          background: var(--colorGreySoft);
+        }
+      }
+
+      .label {
+        color: var(--colorGreySoft);
+      }
+
+      .description {
+        color: var(--colorGreySoft);
+      }
+    }
+  }
+}
