@@ -1,0 +1,16 @@
+.radio1{
+    margin: 0;
+    padding: 0;
+    input{
+        width: 16px;
+        height: 16px;
+    }
+    &.radio-description{
+        margin-left: 5px;
+        color: var(--colorGreen);
+    }
+    &.radio-description-inline{
+        display: inline-flex;
+        margin: 0;
+    }
+}
