@@ -1,0 +1,105 @@
+// version 1 multi option
+.multi-option1 {
+    display: flexbox;
+    font-family: var(--fontNunitoSans);
+    font-weight: var(--fontSemiBold);
+
+    // label
+    .label {
+        color: var(--colorBlack);
+        font-size: 1rem;
+    }
+    // button dropdown
+    .dropdown {
+        display: flex;
+        width: 230px;
+        background-color: var(--colorWhite);
+        border: 1px solid var(--colorGreySoft);
+        border-radius: 5px;
+        padding: 5px 10px;
+        position: relative;
+        font-size: 1rem;
+        cursor: default;
+        
+
+        // fokus outline button / multi option
+        &:focus-within,
+        &:focus-visible {
+            outline: 1px solid var(--colorPrimary);
+        }
+        &::-moz-focus-inner {
+            outline: 1px solid var(--colorPrimary);
+        }
+
+
+
+        select {
+            opacity: 0;
+            pointer-events: none;
+            // display: none;
+            appearance: none;
+            width: 0;
+            height: 0;
+            top: 0;
+            border: 0;
+            // z-index: -999;
+            
+            option{
+                appearance: none;
+                display: none;
+            }
+        }
+
+        // select icon
+        .select-arrow {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            color: var(--colorGreySoft);
+        }
+
+        // select option and selected
+        .select-option,
+        .select-selected {
+            color: var(--colorBlack);
+            padding: 5px 10px;
+            cursor: pointer;
+            display: flex;
+        }
+
+        // Select item in array
+        .select-items {
+            position: absolute;
+            margin-top: 6px;
+            border-radius: 5px;
+            background-color: var(--colorWhite);
+            outline: 1px solid var(--colorGreySoft);
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        // select hide in no select onclick
+        .select-hide {
+            display: none;
+        }
+
+        // select option mouse hover and selected
+        .select-option:hover,
+        .same-as-selected {
+            background-color: var(--colorPrimary);
+            color: var(--colorWhite);
+        }
+    }
+
+    .opt-disabled {
+        pointer-events: none;
+        background-color: var(--colorDisabled);
+        color: var(--colorGreySoft);
+        border: 1px solid var(--colorGreySoft);
+        outline: none;
+    }
+}

@@ -1,5 +1,6 @@
 import Button from "./Basic/Buttons/Button";
 import CheckBox from "./Basic/Checkboxs/Checkbox";
+import MultiOption from "./Basic/MultiOptions/MultiOption";
 import Radio from "./Basic/Radios/Radio";
 import Toggle from "./Basic/Toggles/Toggle";
 function Component() {
@@ -22,11 +23,16 @@ function toggle(){
     return <Toggle />
 }
 
+function multioption(){
+    return <MultiOption />
+}
+
 
 
 Component.button = button;
 Component.radio = radio;
 Component.check = check;
 Component.toggle = toggle;
+Component.multioption = multioption;
 
 export default Component
